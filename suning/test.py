@@ -1,2 +1,12 @@
-d = {'发送成功会员数': '计划发送会员数', '打开会员数': '计划发送会员数', '买家数': '买家1', '付款金额': '付款1'}
-print(d.get('发送成功会员数'))
+import time
+import pandas as pd
+
+
+
+excel_path = '/Users/chandler/Documents/Projects/sndataclean/524_leiji/5.1-5.24_output.xlsx'
+# 读取文件路径至pandas转换为dataframe
+read_df = pd.read_excel(excel_path, sheetname='leiji')
+print(read_df)
+
+
+

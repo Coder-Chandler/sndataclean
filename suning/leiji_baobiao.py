@@ -2,6 +2,9 @@ import time
 import pandas as pd
 import os
 
+
+def log():
+    pass
 # 累计报表只需要下面几个活动归属名称
 act_belongto_name = [
     '营销管理总部-百货事业部', '营销管理总部-冰洗事业部', '营销管理总部超市公司',
@@ -74,7 +77,7 @@ class DataClean(object):
             if name != '小计':
                 total_yingxiaonum += read_df['营销数量'][j]
                 total_gxbuyer += read_df['贡献买家数'][j]
-            else:
+            elif name == '小计':
                 read_df['营销数量'].iat[j] = total_yingxiaonum
                 read_df['贡献买家数'].iat[j] = total_gxbuyer
                 read_df['转化率'].iat[j] = total_gxbuyer / total_yingxiaonum
@@ -128,3 +131,5 @@ if __name__ == '__main__':
     print('报表处理用时 : {0}{1}'.format(t2 - t1, 's'))
 
     excel_path = '/Users/chandler/Documents/Projects/sndataclean/leiji/5.1-5.24_leiji/dirty_data.xlsx'
+
+s='/Users/chandler/Documents/Projects/sndataclean/leiji/6.1-6.27_leiji/dirty_data.xlsx'

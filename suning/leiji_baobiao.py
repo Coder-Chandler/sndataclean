@@ -21,6 +21,11 @@ class DataClean(object):
 
     def data_clean(self):
         # 读取文件路径至pandas转换为dataframe
+        try:
+            test = pd.read_excel(self.path)
+        except:
+            print('出错了！！！！请检查你的路径是否输入正确！或者是否存在该路径？？！！或者文件是否损坏？')
+            return
         read_df = pd.read_excel(self.path)
         # 选取excel表中需要的字段
         df = read_df[['推送类型', '渠道', '活动归属名称', '计划发送会员数', '买家数2', '买家数4', '打开会员数', 'UV']]
@@ -117,19 +122,20 @@ class DataClean(object):
                 read_df['达成评估'].iat[v] = buyer_60 * 60 + zhuanhua_40 * 40
 
         read_df.to_excel(os.path.dirname(self.path) + '/leiji_baobiao.xlsx')
+        print('报表处理完成，保存路径与报表文件所在路径相同')
         return
 
 
 if __name__ == '__main__':
-    t1 = time.time()
     path = input("请输入报表文件所在路径，注意excel为xlsx格式 : ")
     excel_path = path
+    t1 = time.time()
     data_clean = DataClean(dirty_data_path=excel_path)
     df = data_clean.data_clean()
-    print('报表处理完成，保存路径与报表文件所在路径相同')
+
     t2 = time.time()
     print('报表处理用时 : {0}{1}'.format(t2 - t1, 's'))
 
     excel_path = '/Users/chandler/Documents/Projects/sndataclean/leiji/5.1-5.24_leiji/dirty_data.xlsx'
 
-s='/Users/chandler/Documents/Projects/sndataclean/leiji/6.1-6.27_leiji/dirty_data.xlsx'
+s='/Users/chandler/Documents/Projects/sndataclean/leiji/6.1-6.29_leiji/dirty_data.xlsx'

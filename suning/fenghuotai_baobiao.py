@@ -1,54 +1,18 @@
-推送类型
-渠道
-发送日期
-数据日期
-活动类型
-活动编号
-活动名称
-活动归属编码
-活动归属名称
-计划发送会员数
-发送成功会员数
-发送成功率
-A-打开率
-B-点击率
-人均下单数
-下单会员数1
-买家数1
-成功支付订单数1
-付款金额1
-客单价1
-C-转化率1
-下单会员数2
-买家数2
-成功支付订单数2
-付款金额2
-客单价2
-D-目标转化率2
-下单会员数3
-买家数3
-成功支付订单数3
-付款金额3
-客单价3
-C-转化率3
-下单会员数4
-下单会员数4
-买家数4
-成功支付订单数4
-付款金额4
-客单价4
-D-目标转化率4
-反馈会员数
-打开会员数
-点击会员数
-UV
-PV
-加入购物车UV
-加入购物车转化率
-提交订单数
-提交订单金额
-下单会员数
-买家数
-成功支付订单数
-付款金额
-客单价
+import datetime
+import numpy as np
+
+month_order = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+day_order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+# 提取天的函数
+def get_day(x):
+    try:
+        year, month, day = (int(i) for i in x.split('-'))
+        answer = datetime.date(year, month, day).weekday()
+        return answer
+    except:
+        return np.nan
+
+print(get_day('2018-7-7'))
+
+
+

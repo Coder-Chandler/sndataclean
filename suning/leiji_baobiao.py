@@ -11,7 +11,7 @@ act_belongto_name = [
     '营销管理总部-厨卫事业部', '营销管理总部-电脑事业部', '营销管理总部-黑电事业部',
     '营销管理总部-红孩子公司', '营销管理总部-空调事业部', '营销管理总部-生活电器事业部',
     '营销管理总部-数码事业部', '营销管理总部-通讯公司', '运营总部-海外购事业部',
-    '运营总部-会员管理中心'
+    '运营总部-会员管理中心', '汽车',
 ]
 
 
@@ -138,4 +138,4 @@ if __name__ == '__main__':
 
     excel_path = '/Users/chandler/Documents/Projects/sndataclean/leiji/5.1-5.24_leiji/dirty_data.xlsx'
 
-s='/Users/chandler/Documents/Projects/sndataclean/leiji/7.1-7.20_leiji/dirty_data.xlsx'
+s='/Users/chandler/Documents/Projects/sndataclean/leiji/8.1-8.2_leiji/dirty_data.xlsx'

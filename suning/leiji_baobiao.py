@@ -138,4 +138,4 @@ if __name__ == '__main__':
 
     excel_path = '/Users/chandler/Documents/Projects/sndataclean/leiji/5.1-5.24_leiji/dirty_data.xlsx'
 
-s='/Users/chandler/Documents/Projects/sndataclean/leiji/8.1-8.2_leiji/dirty_data.xlsx'
+s='/Users/chandler/Documents/Projects/sndataclean/leiji/8.1-8.3_leiji/8.2baobiao/dirty_data.xlsx'
